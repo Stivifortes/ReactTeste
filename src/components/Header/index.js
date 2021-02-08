@@ -1,5 +1,5 @@
 import React from 'react';
-import './header.css';
+import { NavLink } from 'react-router-dom';
 import { HeaderContainer, LogoContainer, MenuContainer, AlignContainer } from './styles';
 export const Header = () => {
   return (
@@ -9,10 +9,8 @@ export const Header = () => {
           Sharelabel logo
         </LogoContainer>
         <MenuContainer>
-          <a href="#">Home</a>
-          <a href="#">Service</a>
-          <a href="#">Products</a>
-          <a href="#">Contact</a>
+          <NavLink  exact to="/" activeClassName="is-active">Home</NavLink>
+          {/* <NavLink to="/checkout" activeClassName="is-active">Checkout</NavLink> */}
         </MenuContainer>
       </AlignContainer>
     </HeaderContainer>

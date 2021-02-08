@@ -1,13 +1,19 @@
 import React from 'react';
 import './App.css';
-import { Header } from './Header';
-import { Body } from './Body';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Plans } from './pages/Plans';
+import { Checkout } from './pages/Checkout';
+
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <Body/>
-    </div>
+    <Router>
+        {/* Create the Routes*/}
+        <Switch>
+          <Route path='/' exact component={Plans}/>
+          <Route path='/checkout' exact component={Checkout}/>
+          <Route path='/' render = {() => <div>404</div> }/>
+        </Switch>
+    </Router>
   );
 }
 

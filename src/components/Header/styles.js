@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const HeaderContainer = styled.nav `
   width: 100%;
   height: 75px;
-  background: darkblue;
+  background: #37517e;
   color: #FFF;
   font-size: 18px;
   display: flex;
@@ -36,8 +36,11 @@ export const MenuContainer = styled.div `
     color: #FFF;
     margin: 20px;
   }
-  a:hover{
-    background: red;
+  .is-active{
+    padding: 5px;
+    color: #FFF;
+    border: 1px solid grey;
+    //background-color: #0099FF;
   }
 `;
 

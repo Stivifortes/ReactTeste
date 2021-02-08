@@ -4,22 +4,22 @@ export const CardContainer = styled.div`
     margin: 40px;
     padding: 15px;
     width: 300px;
-    height: 450px;
+    height: auto;
     border-top: 3px solid #00a7be;
     border-radius: 4px;
     box-shadow: 0 0 10px grey;
     :hover {
-      margin-top: 15px;
+      margin-top: 10px;
     }
 
     h1 {
       margin: 20px 20px 25px 20px;
-      color: darkblue;
+      color: #37517e;
       font-size: 20px;
       text-align: left;
     }
     ul {
-      margin: 40px 20px;
+      margin: 40px 10px;
 
       li {
         text-align: left;
@@ -39,6 +39,17 @@ export const CardContainer = styled.div`
         }
       }
     }
+    button {
+      background: #11a9ba;
+      outline: 0;
+      color: #FFF;
+      margin-top: 0px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      padding: 10px 30px;
+      cursor: pointer;    
+    }
 `;
 
 export const Price = styled.div`
@@ -47,7 +58,7 @@ export const Price = styled.div`
     #price {
       font-size: 40px;
       align-items:left;
-      color: darkblue;
+      color: #37517e;
 
       sup {
         font-size: 20px;

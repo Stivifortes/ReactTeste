@@ -10,9 +10,9 @@ export const H1 = styled.h1 `
   text-align: center;
   margin-top: 150px;
   margin-bottom: 30px;
-  font-size: 40px;
+  font-size: 30px;
   text-transform: uppercase;
-  color: darkblue;
+  color: #37517e;
 `;
 export const HR = styled.hr `
   text-align:center;
