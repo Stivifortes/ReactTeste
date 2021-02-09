@@ -10,6 +10,7 @@ export const Header = () => {
         </LogoContainer>
         <MenuContainer>
           <NavLink  exact to="/" activeClassName="is-active">Home</NavLink>
+          <a href="#about">About</a>
           {/* <NavLink to="/checkout" activeClassName="is-active">Checkout</NavLink> */}
         </MenuContainer>
       </AlignContainer>

@@ -13,9 +13,17 @@ const Form = ({numberAddedFunc}) => {
   return (
     <FormContainer>
       <form onSubmit={(e) => numberAddedFunc(e, numberAdded)}>
+        <input type="number" placeholder="Add more users" onInput={getNumberAdded} min={0}/>
+        <button type="submit">Add</button>
+      </form>
+
+
+      {/*<FormContainer>
+      <form onSubmit={(e) => numberAddedFunc(e, numberAdded)}>
         <input type="number" placeholder="More users" onInput={getNumberAdded} min={0}/>
         <button type="submit">Add</button>
       </form>
+    </FormContainer>*/}
     </FormContainer>
   );
 }

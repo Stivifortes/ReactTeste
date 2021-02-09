@@ -1,9 +1,19 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Layout } from '../../components/Layout';
 import CardPlan from '../../components/CardPlan';
 import { BodyContainer, H1, HR, HRcolored, CardSection } from './styles';
+import apiData from '../../plans';
 
 export const Plans = () => {
+  
+  const [plans, setPlans] = useState (null);
+
+  useEffect(()=>{
+    setPlans(apiData);
+  }, [])
+  //console.log(plans);
+  
+
   return (
     <Layout>
       <BodyContainer>
@@ -16,9 +26,20 @@ export const Plans = () => {
           to checkout.
         </p>
         <CardSection>
-          <CardPlan showButton/>
-          <CardPlan showButton/>
-          <CardPlan showButton/>
+          { plans ? plans.map ((plan, index) => (<CardPlan 
+              key={index}
+              planId={plan.planId}
+              planTitle={plan.planTitle}
+              planPrice={plan.planPrice}
+              planDescription={plan.planDescription}
+              showButton
+            />
+          )) : 'Loading'}
+          
+          
+          {/*<CardPlan showButton planId={1}/>
+          <CardPlan showButton planId={2}/>
+  <CardPlan showButton planId={3}/>*/}
         </CardSection>
       </BodyContainer>
     </Layout>
