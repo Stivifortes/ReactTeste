@@ -86,4 +86,20 @@ export const TotalPrice = styled.div`
     margin: 20px auto;
     display: flex;
     justify-content: space-between;
+
+    span {
+      color: red;
+    }
+`;
+export const Button = styled.button`
+    padding: 15px 70px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    background: #04518C;
+    margin: 40px auto 20px auto;
+    display: flex;
+    justify-content: space-between;
 `;

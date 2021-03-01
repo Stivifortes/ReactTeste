@@ -2,14 +2,16 @@ import React, {useEffect, useState} from 'react';
 import { Layout } from '../../components/Layout';
 import CardPlan from '../../components/CardPlan';
 import { BodyContainer, H1, HR, HRcolored, CardSection } from './styles';
-import apiData from '../../plans';
+import apiData from '../../services/plans';
 
 export const Plans = () => {
   
   const [plans, setPlans] = useState (null);
-
+  const [isLoading, setIsLoading] = useState (true);
+  
   useEffect(()=>{
     setPlans(apiData);
+    setIsLoading(false);
   }, [])
   //console.log(plans);
   
@@ -17,7 +19,7 @@ export const Plans = () => {
   return (
     <Layout>
       <BodyContainer>
-        <H1>Continue to Checkout</H1>
+        <H1>Choose Your Plan</H1>
         <HR/>
         <HRcolored/>
         <p id="CheckoutDescription">Almost there!
@@ -26,7 +28,9 @@ export const Plans = () => {
           to checkout.
         </p>
         <CardSection>
-          { plans ? plans.map ((plan, index) => (<CardPlan 
+          { isLoading ? 
+            'Loading...' : 
+            plans.map ((plan, index) => (<CardPlan 
               key={index}
               planId={plan.planId}
               planTitle={plan.planTitle}
@@ -34,12 +38,9 @@ export const Plans = () => {
               planDescription={plan.planDescription}
               showButton
             />
-          )) : 'Loading'}
           
-          
-          {/*<CardPlan showButton planId={1}/>
-          <CardPlan showButton planId={2}/>
-  <CardPlan showButton planId={3}/>*/}
+            ))
+          }
         </CardSection>
       </BodyContainer>
     </Layout>

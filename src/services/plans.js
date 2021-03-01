@@ -2,7 +2,7 @@ export default [
   {
     planId: 1,
     planTitle: 'Free Plan',
-    planPrice: 0,
+    planPrice: 'Free',
     planDescription:{
       users: 10,
       projects: 1,
@@ -24,11 +24,11 @@ export default [
   {
     planId: 3,
     planTitle: 'Professional Plan',
-    planPrice: 330,
+    planPrice: 'Custom',
     planDescription: {
-      users: 100000,
-      projects: 100000,
-      files: 10000000000,
+      users: 'Customized',
+      projects: 'Customized',
+      files: 'Customized',
       isPhysicallySeparated: true,
     },
   }

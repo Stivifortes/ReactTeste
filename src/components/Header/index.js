@@ -9,9 +9,9 @@ export const Header = () => {
           Sharelabel logo
         </LogoContainer>
         <MenuContainer>
-          <NavLink  exact to="/" activeClassName="is-active">Home</NavLink>
-          <a href="#about">About</a>
-          {/* <NavLink to="/checkout" activeClassName="is-active">Checkout</NavLink> */}
+          <NavLink to="/" exact activeClassName="is-active">Home</NavLink>
+          <NavLink to="/tenant" exact activeClassName="is-active">Tenant</NavLink>
+          <NavLink to="/contact" exact activeClassName="is-active">Contact</NavLink>
         </MenuContainer>
       </AlignContainer>
     </HeaderContainer>
